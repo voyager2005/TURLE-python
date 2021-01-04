@@ -9,6 +9,8 @@ def motion(event):
         y = y - 327
     elif y < 327:
         y = 327 - y
+    elif y == 327:
+        y = 0
     print('{}, {}'.format(x, y))
 
 
