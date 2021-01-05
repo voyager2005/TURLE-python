@@ -1,9 +1,10 @@
+
 # import required modules
 import turtle
 import time
 import random
 
-# initialization 
+# initialization
 delay = 0.09
 score = 0
 high_score = 0
@@ -61,7 +62,7 @@ pen.write("Score : 0  High Score : 0", align="center",
 # assigning key directions
 def go_up():
     global keys
-    print(str(keys) + " up")
+    print("(" + str(head.xcor()) + ", " + str(head.ycor()) + ") " + str(keys) + " up ")
     keys = keys + 1
     if head.direction != "down":
         head.direction = "up"
@@ -69,7 +70,7 @@ def go_up():
 
 def go_down():
     global keys
-    print(str(keys) + " down")
+    print("(" + str(head.xcor()) + ", " + str(head.ycor()) + ") " + str(keys) + " down ")
     keys = keys + 1
     if head.direction != "up":
         head.direction = "down"
@@ -77,7 +78,7 @@ def go_down():
 
 def go_left():
     global keys
-    print(str(keys) + " left")
+    print("(" + str(head.xcor()) + ", " + str(head.ycor()) + ") " + str(keys) + " left ")
     keys = keys + 1
     if head.direction != "right":
         head.direction = "left"
@@ -85,7 +86,7 @@ def go_left():
 
 def go_right():
     global keys
-    print(str(keys) + " right")
+    print("(" + str(head.xcor()) + ", " + str(head.ycor()) + ") " + str(keys) + " right")
     keys = keys + 1
     if head.direction != "left":
         head.direction = "right"
@@ -106,12 +107,11 @@ def move():
         head.setx(x + 20)
 
 
-# YOU CAN CHANGE YOUR KEY BINDINGS HERE
 wn.listen()
-wn.onkeypress(go_up, "8")  # CHANGE YOUR GO UP KEY HERE
-wn.onkeypress(go_down, "5")  # CHANGE YOUR GO DOWN KEY HERE
-wn.onkeypress(go_left, "4")  # CHANGE YOUR GO LEFT KEY HERE
-wn.onkeypress(go_right, "6")  # CHANGE YOUR GO RIGHT KEY HERE
+wn.onkeypress(go_up, "8")
+wn.onkeypress(go_down, "5")
+wn.onkeypress(go_left, "4")
+wn.onkeypress(go_right, "6")
 
 segments = []
 
@@ -127,14 +127,15 @@ while True:
         for segment in segments:
             segment.goto(1000, 1000)
         segments.clear()
+        keys = 0
         score = 0
-        delay = 0.9
+        delay = 0.09
+        print("********************* YOU DIED HERE ****************************")
         pen.clear()
         pen.write("Score : {} High Score : {} ".format(
             score, high_score), align="center", font=("consolas", 24, "bold"))
     if head.distance(food) < 20:
-        x = 100
-        y = 100
+        print("*** you ate the food here ***")
         for i in range(3):
             x = random.randint(int(negative_x)+30, int(positive_x)-30)
             y = random.randint(int(negative_y)+30, int(positive_y)-30)
