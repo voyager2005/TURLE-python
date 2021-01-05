@@ -1,4 +1,3 @@
-
 # import required modules
 import turtle
 import time
@@ -107,12 +106,12 @@ def move():
         head.setx(x + 20)
 
 
-# YOU CAN CHANGE YOUR KEY BINDINGS HERE
+# you can change your key bindings here
 wn.listen()
-wn.onkeypress(go_up, "8")  # CHANGE YOUR GO UP KEY HERE
-wn.onkeypress(go_down, "5")  # CHANGE YOUR GO DOWN KEY HERE
-wn.onkeypress(go_left, "4")  # CHANGE YOUR GO LEFT KEY HERE
-wn.onkeypress(go_right, "6")  # CHANGE YOUR GO RIGHT KEY HERE
+wn.onkeypress(go_up, "8")  # change your go up key here
+wn.onkeypress(go_down, "5")  # change your go down key here
+wn.onkeypress(go_left, "4")  # change your go left key here
+wn.onkeypress(go_right, "6")  # change your go right key here
 
 segments = []
 
@@ -127,16 +126,22 @@ while True:
         shapes = random.choice(['square', 'circle'])
         for segment in segments:
             segment.goto(1000, 1000)
+        print("********************* YOU DIED HERE ****************************")
+        if len(segments) < 10:
+            print("******************** your length was: " + str(len(segments)) + "*************************")
+        elif len(segments) < 100:
+            print("******************* your length was: " + str(len(segments)) + "*************************")
+        elif len(segments) < 1000:
+            print("******************* your length was: " + str(len(segments)) + "***********************")
         segments.clear()
         keys = 0
         score = 0
         delay = 0.09
-        print("********************* YOU DIED HERE ****************************")
         pen.clear()
         pen.write("Score : {} High Score : {} ".format(
             score, high_score), align="center", font=("consolas", 24, "bold"))
     if head.distance(food) < 20:
-        print("*** you ate the food here ***")
+        print("*** you ate some food here " + "(" + str(head.xcor()) + ", " + str(head.ycor()) + ") ***")
         for i in range(3):
             x = random.randint(int(negative_x)+30, int(positive_x)-30)
             y = random.randint(int(negative_y)+30, int(positive_y)-30)
@@ -176,8 +181,15 @@ while True:
             shapes = random.choice(['square', 'circle'])
             for segment in segments:
                 segment.goto(1000, 1000)
-            segment.clear()
-
+            print("********************* YOU DIED HERE ****************************")
+            if len(segments) < 10:
+                print("******************** your length was: " + str(len(segments)) + "*************************")
+            elif len(segments) < 100:
+                print("******************* your length was: " + str(len(segments)) + "*************************")
+            elif len(segments) < 1000:
+                print("******************* your length was: " + str(len(segments)) + "***********************")
+            segments.clear()
+            keys = 0
             score = 0
             delay = 0.09
             pen.clear()
