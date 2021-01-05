@@ -177,7 +177,7 @@ while True:
             segment.clear()
 
             score = 0
-            delay = 0.9
+            delay = 0.09
             pen.clear()
             pen.write("Score : {} High Score : {} ".format(
                 score, high_score), align="center", font=("consolas", 24, "bold"))
