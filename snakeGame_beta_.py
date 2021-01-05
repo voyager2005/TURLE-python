@@ -106,11 +106,12 @@ def move():
         head.setx(x + 20)
 
 
+# YOU CAN CHANGE YOUR KEY BINDINGS HERE
 wn.listen()
-wn.onkeypress(go_up, "8")
-wn.onkeypress(go_down, "5")
-wn.onkeypress(go_left, "4")
-wn.onkeypress(go_right, "6")
+wn.onkeypress(go_up, "8")  # CHANGE YOUR GO UP KEY HERE
+wn.onkeypress(go_down, "5")  # CHANGE YOUR GO DOWN KEY HERE
+wn.onkeypress(go_left, "4")  # CHANGE YOUR GO LEFT KEY HERE
+wn.onkeypress(go_right, "6")  # CHANGE YOUR GO RIGHT KEY HERE
 
 segments = []
 
