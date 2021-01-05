@@ -7,7 +7,7 @@
 ![image2 4](https://user-images.githubusercontent.com/76808676/103536042-d08fd180-4eb7-11eb-8146-065c8c7e94b8.png)
 
 ## Things that I want to do next:
-### chessboard.py: ( hopefully i will be able to complete this by 2023 )
+### chessboard.py: ( hopefully i will be able to complete this by 2025 )
 - [ ] add pawns on the board
 - [ ] make the pawns move on click 
 
