@@ -60,25 +60,33 @@ pen.write("Score : 0  High Score : 0", align="center",
 
 # assigning key directions
 def go_up():
-    print("up")
+    global keys
+    print(str(keys) + " up")
+    keys = keys + 1
     if head.direction != "down":
         head.direction = "up"
 
 
 def go_down():
-    print("down")
+    global keys
+    print(str(keys) + " down")
+    keys = keys + 1
     if head.direction != "up":
         head.direction = "down"
 
 
 def go_left():
-    print("left")
+    global keys
+    print(str(keys) + " left")
+    keys = keys + 1
     if head.direction != "right":
         head.direction = "left"
 
 
 def go_right():
-    print("right")
+    global keys
+    print(str(keys) + " right")
+    keys = keys + 1
     if head.direction != "left":
         head.direction = "right"
 
