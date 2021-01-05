@@ -1,3 +1,8 @@
+# good to know:
+# you can ignore the ( 1 Warning, 5 Weak Warnings, 4 typos ) that wont cause any runtime errors
+# all the stats of your game are dispayed in the run section if you are using pycharm editor... its where all the text is displayed
+# you can always alter the values of the width and height of the window on line: 18 and 19
+
 # import required modules
 import turtle
 import time
