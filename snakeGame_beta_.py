@@ -123,6 +123,8 @@ segments = []
 # Main Gameplay
 while True:
     wn.update()
+    # you can uncomment the below code if you want to print your precise location 
+    # print("(" + str(head.xcor()) + ", " + str(head.ycor()) + ")")
     if head.xcor() > positive_x or head.xcor() < negative_x or head.ycor() > positive_y or head.ycor() < negative_y:
         time.sleep(1)
         head.goto(0, 0)
