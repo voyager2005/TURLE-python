@@ -112,7 +112,13 @@ def move():
 
 
 # you can change your key bindings here
-wn.listen()
+wn.listen()  # keep this as your main keys 
+wn.onkeypress(go_up, "Up")  # change your go up key here
+wn.onkeypress(go_down, "Down")  # change your go down key here
+wn.onkeypress(go_left, "Left")  # change your go left key here
+wn.onkeypress(go_right, "Right")  # change your go right key here
+
+wn.listen()  # keep this as your secondary keys 
 wn.onkeypress(go_up, "8")  # change your go up key here
 wn.onkeypress(go_down, "5")  # change your go down key here
 wn.onkeypress(go_left, "4")  # change your go left key here
